@@ -103,4 +103,11 @@ body{
 }
 h1{
     color:yellow;
+    font-size: 20pt;
+}
+h2{
+    color:yellow;
+}
+h3{
+    color: yellow
 }

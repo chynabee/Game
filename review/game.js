@@ -72,6 +72,23 @@ function move(key, player) {
     if(key === "ArrowRight") {
         moveRight(player);
     }
+
+    if(key === "Space") {
+        const vest1 = document.getElementById("vest1")
+        const vest2 = document.getElementById("vest2")
+        const vest3 = document.getElementById("vest3")
+        const vest4 = document.getElementById("vest4")
+        const vest5 = document.getElementById("vest5")
+        const vest6 = document.getElementById("vest6")
+
+        if (checkOverlap(player, vest1)) {collectVest(player)}
+        else if (checkOverlap(player, vest2)) {collectVest(player)}
+        else if (checkOverlap(player, vest3)) {collectVest(player)}
+        else if (checkOverlap(player, vest4)) {collectVest(player)}
+        else if (checkOverlap(player, vest5)) {collectVest(player)}
+        else if (checkOverlap(player, vest6)) {collectVest(player)}
+    }
+   
 }
 
 function moveUp(player) {

@@ -107,11 +107,16 @@ function moveLeft(player) {
 // create variables that keep track of if player is in planet
 let numPlanetsVisited = 0;
 let isInPlanet1 = false;
+let isInPlanet2 = false;
+let isInPlanet3 = false;
 
 function checkOverlaps(player) {
 
     //check if player is in planet 1
     checkInPlanet1(player);
+    checkInPlanet2(player);
+    checkInPlanet3(player);
+    
 
 }
 
@@ -136,6 +141,54 @@ function checkInPlanet1(player) {
         }
 
         isInPlanet1 = false;
+    }
+}
+
+function checkInPlanet2(player) {
+    const planet = document.getElementById("planet2");
+    if(checkOverlap(planet, player)) {
+
+        //if they were just outside the planet, 
+        //indicate they are entering
+        if(!isInPlanet2){
+            updatePlanetCount();
+            printMessage("Entering Planet 2");
+        }
+
+        isInPlanet2 = true;
+    } else {
+
+        //if they were just in the Planet, 
+        //indicate they are leaving
+        if(isInPlanet2) {
+            printMessage("Leaving Planet 2");
+        }
+
+        isInPlanet2 = false;
+    }
+}
+
+function checkInPlanet3(player) {
+    const planet = document.getElementById("planet3");
+    if(checkOverlap(planet, player)) {
+
+        //if they were just outside the planet, 
+        //indicate they are entering
+        if(!isInPlanet3){
+            updatePlanetCount();
+            printMessage("Entering Planet 3");
+        }
+
+        isInPlanet3 = true;
+    } else {
+
+        //if they were just in the Planet, 
+        //indicate they are leaving
+        if(isInPlanet3) {
+            printMessage("Leaving Planet 3");
+        }
+
+        isInPlanet3 = false;
     }
 }
 

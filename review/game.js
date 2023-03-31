@@ -109,6 +109,9 @@ let numPlanetsVisited = 0;
 let isInPlanet1 = false;
 let isInPlanet2 = false;
 let isInPlanet3 = false;
+let isInPlanet4 = false;
+let isInPlanet5 = false;
+let isInPlanet6 = false;
 
 function checkOverlaps(player) {
 
@@ -116,6 +119,9 @@ function checkOverlaps(player) {
     checkInPlanet1(player);
     checkInPlanet2(player);
     checkInPlanet3(player);
+    checkInPlanet4(player);
+    checkInPlanet5(player);
+    checkInPlanet6(player);
     
 
 }
@@ -189,6 +195,78 @@ function checkInPlanet3(player) {
         }
 
         isInPlanet3 = false;
+    }
+}
+
+function checkInPlanet4(player) {
+    const planet = document.getElementById("planet4");
+    if(checkOverlap(planet, player)) {
+
+        //if they were just outside the planet, 
+        //indicate they are entering
+        if(!isInPlanet4){
+            updatePlanetCount();
+            printMessage("Entering Planet 4");
+        }
+
+        isInPlanet4 = true;
+    } else {
+
+        //if they were just in the Planet, 
+        //indicate they are leaving
+        if(isInPlanet4) {
+            printMessage("Leaving Planet 4");
+        }
+
+        isInPlanet4 = false;
+    }
+}
+
+function checkInPlanet5(player) {
+    const planet = document.getElementById("planet5");
+    if(checkOverlap(planet, player)) {
+
+        //if they were just outside the planet, 
+        //indicate they are entering
+        if(!isInPlanet5){
+            updatePlanetCount();
+            printMessage("Entering Planet 5");
+        }
+
+        isInPlanet5 = true;
+    } else {
+
+        //if they were just in the Planet, 
+        //indicate they are leaving
+        if(isInPlanet5) {
+            printMessage("Leaving Planet 5");
+        }
+
+        isInPlanet5 = false;
+    }
+}
+
+function checkInPlanet6(player) {
+    const planet = document.getElementById("planet6");
+    if(checkOverlap(planet, player)) {
+
+        //if they were just outside the planet, 
+        //indicate they are entering
+        if(!isInPlanet6){
+            updatePlanetCount();
+            printMessage("Entering Planet 6");
+        }
+
+        isInPlanet6 = true;
+    } else {
+
+        //if they were just in the Planet, 
+        //indicate they are leaving
+        if(isInPlanet6) {
+            printMessage("Leaving Planet 6");
+        }
+
+        isInPlanet6 = false;
     }
 }
 

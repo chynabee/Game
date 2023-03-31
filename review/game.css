@@ -12,7 +12,7 @@ body{
     top:0px;
     z-index:100;
 }
-#planet1, #planet2, #planet3 {
+.planets{
     width:200px;
     height:200px;
     position: absolute;            
@@ -20,23 +20,68 @@ body{
     color:yellow;
     text-align:center;
 }
+.vests{
+    position: absolute;
+    height: 150px;
+    width: auto;
+}
 #planet1 {
-    top:250px;
-    left:0px;
+    top:350px;
+    left:10px;
     background-color: purple;
 }
+#vest1{
+    top:350px;
+    left:10px;  
+}
 #planet2{
-    top:50px;
+    top:100px;
     left:450px;
     background-color: blue;
 }
+#vest2{
+    top:100px;
+    left:450px;
+}
 #planet3{
-    top:400px;
-    left:400px;
+    top:500px;
+    left:500px;
     background-color: yellowgreen;
 }
+#vest3{
+    top:500px;
+    left:500px;
+}
+#planet4{
+    top: 400px;
+    right: 600px;
+    background-color: #FF9500;
+}
+#vest4{
+    top: 400px;
+    right: 600px;
+}
+#planet5{
+    top: 250px;
+    right: 200px;
+    background-color: #FF0068;
+}
+#vest5{
+    top: 250px;
+    right: 200px;
+}
+#planet6{
+    top: 20px;
+    left: 100px;
+    background-color: #00FFF9;
+}
+#vest6{
+    top: 20px;
+    left: 100px;
+}
 #ufo {
-    width:150px;
+    width:300px;
+    height: auto;
 }
 #stats {
     width:400px;
